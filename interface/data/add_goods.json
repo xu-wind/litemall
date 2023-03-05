@@ -1,0 +1,35 @@
+{
+    "goods": {
+        "picUrl": "",
+        "gallery": [],
+        "isHot": true,
+        "isNew": true,
+        "isOnSale": true,
+        "goodsSn": "编号",
+        "name": "名称",
+        "counterPrice": "",
+        "categoryId": 1042002,
+        "brandId": 1046085,
+        "brief": "",
+        "detail": ""
+    },
+    "specifications": [
+        {
+            "specification": "规格",
+            "value": "标准",
+            "picUrl": ""
+        }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "specifications": [
+                "标准"
+            ],
+            "price": 0,
+            "number": 0,
+            "url": ""
+        }
+    ],
+    "attributes": []
+}
