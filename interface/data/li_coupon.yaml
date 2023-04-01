@@ -1,0 +1,10 @@
+test_coupon1:
+  name: "test12345"
+  introduce: "无"
+  label: "无"
+  consume: "1"
+  full: "1"
+  text: "2"
+  limit: "1"
+  num: "1"
+  time: "1"

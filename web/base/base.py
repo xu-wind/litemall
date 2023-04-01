@@ -14,12 +14,21 @@ class Base:
     def base_click(self, loc):
         self.base_find_element(loc).click()
 
+    # 封装js点击方法
+    def base_js_click(self, loc):
+        el = self.base_find_element(loc)
+        self.driver.execute_script("arguments[0].click();", el)
+
     # 输入元素
     def base_input(self, loc, value):
         el = self.base_find_element(loc)
         # 输入前先清空
         el.clear()
         el.send_keys(value)
+
+    # 上传文件
+    def base_send_file(self, loc, value):
+        self.base_find_element(loc).send_keys(value)
 
     # 获取文本
     def base_get_text(self, loc):

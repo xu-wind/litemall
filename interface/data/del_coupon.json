@@ -1,0 +1,22 @@
+{
+  "id": 47,
+  "name": "优惠券11",
+  "desc": "",
+  "tag": "",
+  "total": 0,
+  "discount": 0,
+  "min": 0,
+  "limit": 1,
+  "type": 0,
+  "status": 0,
+  "goodsType": 2,
+  "goodsValue": [
+    1183534
+  ],
+  "timeType": 0,
+  "days": 0,
+  "addTime": "2022-11-30 16:56:12",
+  "updateTime": "2022-11-30 16:56:43",
+  "deleted": false,
+  "daysType": 1
+}

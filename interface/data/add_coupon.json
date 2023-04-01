@@ -1,0 +1,19 @@
+{
+  "name": "优惠券名称",
+  "desc": "介绍",
+  "tag": "标签",
+  "total": "2",
+  "discount": "20",
+  "min": "1",
+  "limit": 1,
+  "type": 0,
+  "status": 0,
+  "goodsType": 2,
+  "goodsValue": [
+    1183534
+  ],
+  "timeType": 0,
+  "days": "1",
+  "startTime": null,
+  "endTime": null
+}

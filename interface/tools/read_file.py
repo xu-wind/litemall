@@ -2,7 +2,7 @@ import json
 import os
 import yaml
 
-from config import BASE_PATH
+from interface.config import BASE_PATH
 
 
 def read_json(filename):
@@ -21,5 +21,17 @@ def read_yaml(filename):
     return data
 
 
-if __name__ == '__main__':
-    print(read_yaml("li_login.yaml"))
+def yaml_to_json(filename):
+    file = BASE_PATH + os.sep + "data" + os.sep + filename
+    with open(file, "r", encoding="utf-8") as f:
+        data = yaml.load(f, Loader=yaml.Loader)
+    json_data = json.dumps(data)
+    print(json_data)
+
+
+def json_to_yaml(filename):
+    file = BASE_PATH + os.sep + "data" + os.sep + filename
+    with open(file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    yaml_data = yaml.dump(data)
+    print(yaml_data)

@@ -1,5 +1,5 @@
-import page
-from base.web_base import WebBase
+from web import page
+from web.base.web_base import WebBase
 
 
 class PageAddGoods(WebBase):

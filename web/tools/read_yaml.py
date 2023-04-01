@@ -1,6 +1,6 @@
 import os
 import yaml
-from config import BASE_PATH
+from web.config import BASE_PATH
 
 
 def read_yaml(filename):

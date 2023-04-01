@@ -1,5 +1,5 @@
-import page
-from base.web_base import WebBase
+from web import page
+from web.base.web_base import WebBase
 
 
 class PageSearchGoods(WebBase):
@@ -23,9 +23,13 @@ class PageSearchGoods(WebBase):
     def page_click_search_btn(self):
         self.base_click(page.li_search_btn)
 
+    # 点击商品侧边按钮
+    def page_click_broadside_btn(self):
+        self.base_click(page.li_broadside_btn)
+
     # 判断商品是否存在
-    def page_goods_is_exist(self, text):
-        return self.web_base_goods_is_exist(text)
+    def page_goods_is_exist(self, num, name):
+        return self.web_base_goods_is_exist(num, name)
 
     # 组合搜索商品业务
     def page_search_goods(self, num, name):
@@ -34,3 +38,4 @@ class PageSearchGoods(WebBase):
         self.page_input_goods_num(num)
         self.page_input_goods_name(name)
         self.page_click_search_btn()
+        self.page_click_broadside_btn()

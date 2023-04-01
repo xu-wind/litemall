@@ -1,7 +1,7 @@
 from selenium import webdriver
 import appium.webdriver
 
-import page
+from web import page
 
 
 class GetDriver:
@@ -11,7 +11,9 @@ class GetDriver:
     @classmethod
     def get_web_driver(cls, url):
         if cls.__driver is None:
-            cls.__driver = webdriver.Chrome()
+            option = webdriver.ChromeOptions()
+            option.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
+            cls.__driver = webdriver.Chrome(options=option)
             cls.__driver.maximize_window()
             cls.__driver.implicitly_wait(5)  # 添加隐式等待可以避免操作过快导致报错问题
             cls.__driver.get(url)

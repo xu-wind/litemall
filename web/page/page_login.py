@@ -1,5 +1,5 @@
-from base.base import Base
-import page
+from web.base.base import Base
+from web import page
 
 
 class PageLogin(Base):

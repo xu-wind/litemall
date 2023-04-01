@@ -1,15 +1,16 @@
-import pytest
+import unittest
 
+from parameterized import parameterized
 from interface.api.api_goods import ApiGoods
 from interface.tools.common import Common
 from interface.tools.read_file import read_yaml
 
 
-class TestGoods:
-    def setup_class(self):
+class TestGoods(unittest.TestCase):
+    def setUp(self):
         self.goods = ApiGoods()
 
-    @pytest.mark.parametrize("goodsSn, name", read_yaml("li_goods.yaml"))
+    @parameterized.expand(read_yaml("li_goods.yaml"))
     def test01_add_goods(self, goodsSn, name):
         r = self.goods.api_login()
         Common.get_token(r)
@@ -20,4 +21,4 @@ class TestGoods:
 
 
 if __name__ == '__main__':
-    pytest.main(['-s', "test_goods.py"])
+    unittest.main()

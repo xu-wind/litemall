@@ -1,8 +1,12 @@
-from page.page_add_goods import PageAddGoods
-from page.page_app_login import PageAppLogin
-from page.page_app_search import PageAppSearch
-from page.page_login import PageLogin
-from page.page_search_goods import PageSearchGoods
+from web.page.page_add_coupon import PageAddCoupon
+from web.page.page_add_goods import PageAddGoods
+from web.page.page_app_login import PageAppLogin
+from web.page.page_app_search import PageAppSearch
+from web.page.page_delete_coupon import PageDeleteCoupon
+from web.page.page_login import PageLogin
+from web.page.page_object_storage import PageObjectStorage
+from web.page.page_search_coupon import PageSearchCoupon
+from web.page.page_search_goods import PageSearchGoods
 
 
 class PageIn:
@@ -23,3 +27,15 @@ class PageIn:
 
     def page_get_PageAppSearch(self):
         return PageAppSearch(self.driver)
+
+    def page_get_PageAddCoupon(self):
+        return PageAddCoupon(self.driver)
+
+    def page_get_PageSearchCoupon(self):
+        return PageSearchCoupon(self.driver)
+
+    def page_get_PageDeleteCoupon(self):
+        return PageDeleteCoupon(self.driver)
+
+    def page_get_PageObjectStorage(self):
+        return PageObjectStorage(self.driver)
